@@ -1,44 +1,35 @@
-import List from './components/List';
-import Tarea from './components/Tarea';
+import Title from './components/Title';
+
 import './App.css';
 import { useState } from 'react';
+import TodoPorHacer from './components/TodoPorHacer';
+import TodoComplete from './components/TodoComplete';
+import TodoInput from './components/TodoInput';
+
 
 function App() {
-  const [tareas,setTareas]=useState([]);
+  const [tareas,setTareas]=useState([{
+    id:1,
+    title:"tarea prueba",
+    completed:false
+  }]);
 
-  const handleEvent=(evento)=>{
-    
-    let dato= evento.value
 
-    setTareas.push(dato);
-    console.log(tareas);
-
-  }
+ const addNewTask=(title)=>{
   
+
+  return(console.log({title}));
+}
  
  
  
  
   return (
     <div className="App">
-      <div className='todo-list'>
-      <h1>TODO LIST</h1>
-      </div>
-      
-      <div className='por-hacer'>
-        
-        <h2>POR HACER</h2>
-        
-        </div>
-      <div className='completadas'>
-        
-        <h2>COMPLETADAS</h2>
-        
-        </div>
-      
-      <div>
-        <List/>
-      </div>
+      <Title/>
+      <TodoInput addNewTask={addNewTask}/>
+      <TodoPorHacer/>
+      <TodoComplete/>
     </div>
   );
 }

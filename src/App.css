@@ -1,38 +1,26 @@
-.App {
-  text-align: center;
+.App{
+    background-color:gray;
+    min-height:auto;
+    height:900px;
+    
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.todo-app{
+    font-family:'antonio', serif;
+    text-align: center;
+    letter-spacing: 5px;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+; }
+.por-hacer{
+    text-align: center;
+    font-family: 'inter',serif;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.todo-input{
+    text-align: center;
+    font-family: 'inter', serif;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.complete{
+    text-align: center;
+    font-family: 'inter', serif;
 }
