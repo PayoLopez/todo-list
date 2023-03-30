@@ -1,8 +1,7 @@
-const TodoPorHacer=()=>{
+const TodoPorHacer=({children})=>{
 
-    return(<div className="por-hacer">
-        <h2>POR HACER</h2>
-    </div>)
+    return(<div>{children}</div>);
 }
+
 
 export default TodoPorHacer;

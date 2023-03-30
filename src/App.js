@@ -1,13 +1,14 @@
 import Title from './components/Title';
-
-import './App.css';
-import { useState } from 'react';
-import TodoPorHacer from './components/TodoPorHacer';
+import Todos from './components/Todos';
 import TodoComplete from './components/TodoComplete';
+import TodoPorHacer from './components/TodoPorHacer';
 import TodoInput from './components/TodoInput';
+
+import { useState } from 'react';
 
 
 function App() {
+  
   const [tareas,setTareas]=useState([{
     id:1,
     title:"tarea prueba",
@@ -15,21 +16,40 @@ function App() {
   }]);
 
 
- const addNewTask=(title)=>{
-  
+  const pushTask=(title)=>{
+    const lastId = tareas.length > 0 ? tareas[tareas.length - 1].id : 1;
+   
+    const newTask={
+      id:lastId +1,
+      title,
+      completed:false
+    }
+    const todoList=[...tareas]
+    todoList.push(newTask)
+    setTareas(newTask);
+    
+console.log(tareas)
+  }
 
-  return(console.log({title}));
+ const addNewTask=(title)=>{
+    console.log({title});
 }
  
  
  
  
   return (
-    <div className="App">
+    <div className='container-all'>
       <Title/>
       <TodoInput addNewTask={addNewTask}/>
-      <TodoPorHacer/>
-      <TodoComplete/>
+      <TodoComplete tareas={tareas}>
+        <p>Completas</p>
+       
+      </TodoComplete>
+      <TodoPorHacer tareas={tareas}>
+        <p>Por Hacer</p>
+      
+      </TodoPorHacer>
     </div>
   );
 }

@@ -6,18 +6,22 @@ const TodoInput=({addNewTask})=>{
    
   const handleOnKeyDown=(e)=>{
     if(e.key ==='Enter'){
-        console.log({title});
+        addNewTask(title);
+        
+        setTitle('')
     }
   }
    
     return(
-        <div className="todo-input">
+        <div className="container-input">
+            <div className="input">
             <input
                 type="text"
                 value={title}
                 onChange={e=>(setTitle(e.target.value))}
                 placeholder="Nueva Tarea"
                 onKeyDown={e=>(handleOnKeyDown(e))}/>
+                </div>
         </div>
     )
 }
