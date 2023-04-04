@@ -1,6 +1,12 @@
 const TodoPorHacer=({children})=>{
 
-    return(<div>{children}</div>);
+    return(<div>
+        <div><p>POR HACER</p></div>
+     
+
+        {children}
+
+    </div>);
 }
 
 

@@ -1,0 +1,35 @@
+
+
+.container{
+    min-height:100vh;
+    height: 100%;
+    align-items: center;
+   justify-content: center;
+   padding-top: 5rem;
+   padding-bottom: 5rem;
+   padding-left: 1.25rem;
+   padding-right: 1.12rem;
+   background-color:rgb(107, 114, 127) ;
+ 
+ 
+}
+
+.title{
+    font-size: 2rem;
+    line-height: 1;
+    letter-spacing: 1;
+    font-weight: 600;
+}
+
+.span{
+    border-width: 1px;
+    background-color: rgb(107, 114, 127);
+    border-bottom-width: 1px;
+    border-style: solid;
+    border-radius: 9999px;
+    cursor: pointer;
+    padding: 0.75rem;
+    left: 100px;
+    margin-left: 300px;
+   
+}

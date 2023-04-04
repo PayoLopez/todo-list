@@ -7,7 +7,7 @@ const TodoInput=({addNewTask})=>{
   const handleOnKeyDown=(e)=>{
     if(e.key ==='Enter'){
         addNewTask(title);
-        
+      
         setTitle('')
     }
   }

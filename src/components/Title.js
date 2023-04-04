@@ -1,6 +1,6 @@
 const Title =()=>{
 
-    return(<div>
+    return(<div className="title">
         <h1>TODO APP</h1>
         </div>)
 }

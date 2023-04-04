@@ -1,8 +1,9 @@
 import Todos from "./Todos";
-const TodoComplete=({tareas})=>{
+const TodoComplete=({children})=>{
 
     return(<div>
-        {<Todos/>}
+        <p>Completas</p>
+        {children}
     </div>)
 }
 
